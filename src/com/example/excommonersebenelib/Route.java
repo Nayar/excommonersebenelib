@@ -10,6 +10,7 @@ public class Route {
 	
 	public Route(int x){
 		no = x;
+		busStops = new ArrayList<BusStop>();
 	}
 	public void addBusStop(BusStop x){
 		busStops.add(x);
