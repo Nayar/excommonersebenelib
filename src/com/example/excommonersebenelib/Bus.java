@@ -7,6 +7,4 @@ public class Bus {
 	Route route;
 	double x,y;
 	LatLng geoPoint;
-	
-	
 }
