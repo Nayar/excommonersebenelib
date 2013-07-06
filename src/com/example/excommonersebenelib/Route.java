@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 
 public class Route {
-	int no;
-	String from;
-	String to;
+	public int no;
+	public String from;
+	public String to;
 	public ArrayList<BusStop> busStops;
 	
 	public Route(int x,String from,String to){
