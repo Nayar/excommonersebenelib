@@ -6,6 +6,8 @@ public class Bus {
 	public String id;
 	public double x,y;
 	public LatLng geoPoint;
+	MeraListener[] meraListeners = new MeraListener[10];
+	int noListeners = 0;
 	
 	public Bus(String id){
 		this.id = id;
@@ -20,5 +22,8 @@ public class Bus {
 		this.x = x;
 		this.y = y;
 		this.geoPoint = new LatLng(x, y);
+		for(int i = 0;i<noListeners;i++){
+			meraListeners[i].update();
+		}
 	}
 }
