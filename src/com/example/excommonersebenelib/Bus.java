@@ -22,8 +22,13 @@ public class Bus {
 		this.x = x;
 		this.y = y;
 		this.geoPoint = new LatLng(x, y);
-		for(int i = 0;i<noListeners;i++){
+		for(int i = 1;i<noListeners;i++){
 			meraListeners[i].update();
 		}
+	}
+	
+	public void addListener(MeraListener ml){
+		if(noListeners < 10)
+			meraListeners[noListeners++] = ml;
 	}
 }
