@@ -3,14 +3,17 @@ package com.example.excommonersebenelib;
 import com.google.android.gms.maps.model.LatLng;
 
 public class Bus {
-	String id;
-	Route route;
-	double x,y;
-	LatLng geoPoint;
+	public String id;
+	public double x,y;
+	public LatLng geoPoint;
 	
-	public Bus(String id, Route route){
+	public Bus(String id){
 		this.id = id;
-		this.route = route;
+	}
+	
+	public Bus(String id,double x, double y){
+		this.id = id;
+		setLocation(x,y);
 	}
 	
 	public void setLocation(double x,double y){
